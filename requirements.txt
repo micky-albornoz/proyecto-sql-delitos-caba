@@ -1,0 +1,7 @@
+pandas
+sqlalchemy
+psycopg2-binary
+ipython-sql
+jupyter
+python-dotenv
+folium
