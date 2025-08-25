@@ -1,6 +1,6 @@
-# Análisis de la Actividad Delictiva en la Ciudad de Buenos Aires (2024)
+# Análisis de la actividad delictiva en la Ciudad de Buenos Aires (2024)
 
-### Descripción del Proyecto
+### Descripción del proyecto
 
 Este proyecto realiza un análisis exploratorio de datos (EDA) sobre los delitos registrados en la Ciudad Autónoma de Buenos Aires durante el año 2024. Utilizando un conjunto de datos público, se busca identificar patrones y tendencias clave en la actividad delictiva a través de consultas SQL y visualizaciones geoespaciales interactivas.
 
@@ -24,7 +24,7 @@ El dataset contiene información detallada de cada incidente, incluyendo:
 * Indicadores de uso de arma y/o moto.
 * Ubicación geográfica precisa (barrio, comuna, latitud y longitud).
 
-### Preguntas de Análisis
+### Preguntas de análisis
 
 Para guiar la exploración, se plantearon las siguientes preguntas, respondidas mediante consultas directas a la base de datos PostgreSQL:
 
@@ -39,29 +39,29 @@ Para guiar la exploración, se plantearon las siguientes preguntas, respondidas 
 9.  ¿Cuál es la proporción entre Robos y Hurtos en la ciudad?
 10. ¿Cuáles son los barrios con mayor actividad delictiva en horario nocturno (entre las 20:00 y las 06:00)?
 
-### Principales Hallazgos
+### Principales hallazgos
 
 Del análisis de los datos se desprenden las siguientes conclusiones clave:
 
-* **Concentración Geográfica:** Existe una alta concentración de delitos en barrios céntricos y de gran afluencia como Palermo, Balvanera y Recoleta, lo que se evidencia tanto en los conteos totales como en los mapas de calor.
-* **Patrones Temporales:** La actividad delictiva muestra picos durante los días de semana en horarios vespertinos (entre las 17:00 y las 20:00), coincidiendo con el fin de la jornada laboral. Los fines de semana presentan una dinámica diferente, con un aumento de incidentes en horarios nocturnos.
-* **Tipología del Delito:** El **"Hurto (sin violencia)"** es el subtipo de delito más reportado, seguido por el **"Robo (con violencia)"**. Esto sugiere que una gran parte de los incidentes son oportunistas y no necesariamente violentos.
-* **Uso de Medios:** Aunque el porcentaje de delitos con uso de arma es minoritario, su impacto es significativo. El uso de motos se concentra en comunas específicas, indicando un *modus operandi* particular en ciertas zonas.
-* **Zonas Críticas Nocturnas:** El análisis nocturno revela que barrios como Palermo mantienen una alta tasa delictiva, probablemente asociada a su vida nocturna y zonas de ocio.
+* **Concentración geográfica:** Existe una alta concentración de delitos en barrios céntricos y de gran afluencia como Palermo, Balvanera y Recoleta, lo que se evidencia tanto en los conteos totales como en los mapas de calor.
+* **Patrones temporales:** La actividad delictiva muestra picos durante los días de semana en horarios vespertinos (entre las 17:00 y las 20:00), coincidiendo con el fin de la jornada laboral. Los fines de semana presentan una dinámica diferente, con un aumento de incidentes en horarios nocturnos.
+* **Tipología del delito:** El **"Hurto (sin violencia)"** es el subtipo de delito más reportado, seguido por el **"Robo (con violencia)"**. Esto sugiere que una gran parte de los incidentes son oportunistas y no necesariamente violentos.
+* **Uso de medios:** Aunque el porcentaje de delitos con uso de arma es minoritario, su impacto es significativo. El uso de motos se concentra en comunas específicas, indicando un *modus operandi* particular en ciertas zonas.
+* **Zonas críticas nocturnas:** El análisis nocturno revela que barrios como Palermo mantienen una alta tasa delictiva, probablemente asociada a su vida nocturna y zonas de ocio.
 
 ### Visualizaciones
 
 Para complementar el análisis SQL, se generaron dos tipos de mapas interactivos utilizando la librería Folium:
 
-1.  **Mapa de Clústeres:** Permite explorar la distribución de los delitos de forma agrupada. Al hacer zoom, los clústeres se expanden para revelar la ubicación de incidentes individuales.
-2.  **Mapa de Calor (Heatmap):** Ofrece una visión clara e inmediata de las "zonas calientes" o áreas de mayor concentración de delitos en la ciudad, destacando visualmente las áreas que requieren mayor atención.
+1.  **Mapa de clústeres:** Permite explorar la distribución de los delitos de forma agrupada. Al hacer zoom, los clústeres se expanden para revelar la ubicación de incidentes individuales.
+2.  **Mapa de calor (Heatmap):** Ofrece una visión clara e inmediata de las "zonas calientes" o áreas de mayor concentración de delitos en la ciudad, destacando visualmente las áreas que requieren mayor atención.
 
 ![Mapa de delitos clusters](https://github.com/micky-albornoz/proyecto-sql-delitos-caba/blob/main/images/mapa_delitos_clusters.png)
 ![Mapa de delitos calor](https://github.com/micky-albornoz/proyecto-sql-delitos-caba/blob/main/images/mapa_delitos_calor.png)
 
 ---
 
-### ¿Cómo Replicar este Proyecto?
+### ¿Cómo replicar este proyecto?
 
 Puedes replicar este análisis utilizando **GitHub Codespaces** (recomendado) o configurando el entorno en tu máquina local (Debian/Ubuntu).
 
@@ -69,7 +69,7 @@ Puedes replicar este análisis utilizando **GitHub Codespaces** (recomendado) o 
 
 1.  **Abrir en Codespaces:** Haz clic en el botón `Code` en la página principal del repositorio y selecciona `Create a codespace on main`. Esto abrirá un entorno de desarrollo completo en tu navegador.
 
-2.  **Configurar la Base de Datos:** Abre una terminal dentro de Codespaces (`Ctrl+Shift+ñ` o `Terminal > New Terminal`) y ejecuta los siguientes comandos para crear la base de datos y el usuario:
+2.  **Configurar la Base de datos:** Abre una terminal dentro de Codespaces (`Ctrl+Shift+ñ` o `Terminal > New Terminal`) y ejecuta los siguientes comandos para crear la base de datos y el usuario:
     ```bash
     # Acceder a la consola de PostgreSQL
     sudo -u postgres psql
@@ -91,9 +91,9 @@ Puedes replicar este análisis utilizando **GitHub Codespaces** (recomendado) o 
 
 4.  **Ejecutar el Notebook:** Abre el archivo `analisis_delitos.ipynb` y ejecuta todas las celdas en orden. El entorno de Codespaces ya habrá instalado las dependencias de Python del archivo `requirements.txt`.
 
-#### Opción 2: Configuración Local (Debian/Ubuntu)
+#### Opción 2: Configuración local (Debian/Ubuntu)
 
-1.  **Clonar el Repositorio:**
+1.  **Clonar el repositorio:**
     ```bash
     git clone [https://github.com/micky-albornoz/proyecto-sql-delitos-caba.git](https://github.com/micky-albornoz/proyecto-sql-delitos-caba.git)
     cd proyecto-sql-delitos-caba
@@ -119,7 +119,7 @@ Puedes replicar este análisis utilizando **GitHub Codespaces** (recomendado) o 
     \q
     ```
 
-4.  **Instalar Dependencias de Python:** (Se recomienda usar un entorno virtual)
+4.  **Instalar dependencias de Python:** (Se recomienda usar un entorno virtual)
     ```bash
     # Crear y activar un entorno virtual
     python3 -m venv venv
@@ -129,7 +129,7 @@ Puedes replicar este análisis utilizando **GitHub Codespaces** (recomendado) o 
     pip install -r requirements.txt
     ```
 
-5.  **Configurar Credenciales:** Crea un archivo `.env` en la raíz del proyecto con el siguiente contenido:
+5.  **Configurar credenciales:** Crea un archivo `.env` en la raíz del proyecto con el siguiente contenido:
     ```env
     DB_USER="user_delitos"
     DB_PASSWORD="tu_contraseña_segura"
