@@ -56,8 +56,8 @@ Para complementar el análisis SQL, se generaron dos tipos de mapas interactivos
 1.  **Mapa de Clústeres:** Permite explorar la distribución de los delitos de forma agrupada. Al hacer zoom, los clústeres se expanden para revelar la ubicación de incidentes individuales.
 2.  **Mapa de Calor (Heatmap):** Ofrece una visión clara e inmediata de las "zonas calientes" o áreas de mayor concentración de delitos en la ciudad, destacando visualmente las áreas que requieren mayor atención.
 
-*(https://github.com/micky-albornoz/proyecto-sql-delitos-caba/blob/main/images/mapa_delitos_clusters.png)*
-*(https://github.com/micky-albornoz/proyecto-sql-delitos-caba/blob/main/images/mapa_delitos_calor.png)*
+![Mapa de delitos clusters](https://github.com/micky-albornoz/proyecto-sql-delitos-caba/blob/main/images/mapa_delitos_clusters.png)
+![Mapa de delitos calor](https://github.com/micky-albornoz/proyecto-sql-delitos-caba/blob/main/images/mapa_delitos_calor.png)
 
 ---
 
