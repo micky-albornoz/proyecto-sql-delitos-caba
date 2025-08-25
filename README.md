@@ -105,7 +105,7 @@ Puedes replicar este análisis utilizando **GitHub Codespaces** (recomendado) o 
     cd proyecto-sql-delitos-caba
     ```
 
-2.  **Instalar PostgreSQL:**
+2.  **Instalar e iniciar PostgreSQL:**
     ```bash
     sudo apt-get update
     sudo apt-get install -y postgresql postgresql-contrib
@@ -115,7 +115,7 @@ Puedes replicar este análisis utilizando **GitHub Codespaces** (recomendado) o 
 3.  **Configurar la Base de Datos:**
     ```bash
     # Acceder como superusuario de postgres y abrir la consola psql
-    sudo -u postgres psql
+     sudo su - postgres -c "psql"
     ```
     Una vez dentro de la consola `psql`, ejecuta los siguientes comandos:
     ```sql
