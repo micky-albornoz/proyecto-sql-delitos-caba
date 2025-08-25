@@ -69,10 +69,16 @@ Puedes replicar este análisis utilizando **GitHub Codespaces** (recomendado) o 
 
 1.  **Abrir en Codespaces:** Haz clic en el botón `Code` en la página principal del repositorio y selecciona `Create a codespace on main`. Esto abrirá un entorno de desarrollo completo en tu navegador.
 
-2.  **Configurar la Base de datos:** Abre una terminal dentro de Codespaces (`Ctrl+Shift+ñ` o `Terminal > New Terminal`) y ejecuta los siguientes comandos para crear la base de datos y el usuario:
+2.  **Configurar la Base de datos en PostgreSQL:** Abre una terminal dentro de Codespaces (`Ctrl+Shift+ñ` o `Terminal > New Terminal`) y ejecuta los siguientes comandos para crear la base de datos y el usuario:
     ```bash
-    # Acceder a la consola de PostgreSQL
-    sudo -u postgres psql
+     # Instalar PostgreSQL en el Codespace
+    sudo apt-get install -y postgresql postgresql-contrib
+
+     # Iniciar el servicio de PostgreSQL
+    sudo service postgresql start
+
+     # Accede como el usuario postgres
+    sudo su - postgres -c "psql"
 
     # Dentro de psql, ejecuta los siguientes comandos SQL:
     CREATE DATABASE delitos_db;
@@ -83,13 +89,13 @@ Puedes replicar este análisis utilizando **GitHub Codespaces** (recomendado) o 
     \q
     ```
 
-3.  **Crear el archivo de entorno:** En la raíz del proyecto, crea un archivo llamado `.env` y añade tus credenciales. **Este archivo no debe ser subido a GitHub.**
+4.  **Crear el archivo de entorno:** En la raíz del proyecto, crea un archivo llamado `.env` y añade tus credenciales. **Este archivo no debe ser subido a GitHub.**
     ```env
     DB_USER="user_delitos"
     DB_PASSWORD="tu_contraseña_segura"
     ```
 
-4.  **Ejecutar el Notebook:** Abre el archivo `analisis_delitos.ipynb` y ejecuta todas las celdas en orden. El entorno de Codespaces ya habrá instalado las dependencias de Python del archivo `requirements.txt`.
+5.  **Ejecutar el Notebook:** Abre el archivo `analisis_delitos.ipynb` y ejecuta todas las celdas en orden. El entorno de Codespaces ya habrá instalado las dependencias de Python del archivo `requirements.txt`.
 
 #### Opción 2: Configuración local (Debian/Ubuntu)
 
